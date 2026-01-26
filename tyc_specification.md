@@ -841,9 +841,10 @@ auto x;
 x = readInt();         // x: int (inferred from function return type - first usage)
 
 auto y;
-// printInt(y);        // Error: cannot infer type from printInt() call alone
-y = 10;                // y: int (inferred from first usage - assignment)
-printInt(y);           // Now y is int, so printInt can be used
+printInt(y);           // y: int (inferred from function parameter type - first usage)
+auto z;
+z = readInt();         // z: int (inferred from function return type - first usage)
+printInt(z);           // Now z is int, so printInt can be used
 ```
 
 **2.3 Variable Declaration with Explicit Type and Initialization:**
